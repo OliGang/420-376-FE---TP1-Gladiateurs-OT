@@ -14,7 +14,6 @@ public class Personnage {
         valeurMaxAttaque = attaqueMax;
         valeurDefense = defense;
         initiative = ini;
-
     }
 
     public Personnage() {
@@ -29,15 +28,62 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    // TODO : Les getters
-    // TODO : Les setters
+    public int getInitiative() {    
+        return initiative;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    public int getValeurDefense() {
+        return valeurDefense;
+    }
+    
+    public int getValeurMaxAttaque() {
+        return valeurMaxAttaque;
+    }
+
+    public void setInitiative(int initiative) {
+        this.initiative = initiative;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+
+    public void setValeurDefense(int valeurDefense) {
+        this.valeurDefense = valeurDefense;
+    }
+
+    public void setValeurMaxAttaque(int valeurMaxAttaque) {
+        this.valeurMaxAttaque = valeurMaxAttaque;
+    }
     // </editor-fold>
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
-        // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+        System.out.println("");
+        System.out.println(nom);
+        System.out.println("    Attaque : " + valeurMaxAttaque);
+        System.out.println("    Defense : " + valeurDefense);
+        System.out.println("    Points de vie : " + pointsDeVie);
+        System.out.println("    Initiative : " + initiative);
+        if (pointsDeVie <= 0) {
+            System.out.println("    Statut : Mort");
+        } else {
+            System.out.println("    Statut : Vivant");
+        }
     }
 
     private int attaqueCalcul() {
