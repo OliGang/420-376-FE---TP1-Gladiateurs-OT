@@ -97,9 +97,23 @@ public class Personnage {
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
-        // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
-        //modifier les points de vie du personnage cible, afficher les détails
-        // sur l'attaque, tel que montré dans l'énoncé.
+        int nbAttaque = attaqueCalcul();
+        int nbDefense = personnageCible.getValeurDefense();
+        int degat;
+        if (nbAttaque - nbDefense <= 0) {
+            degat = 0; 
+        } else {
+            degat = nbAttaque - nbDefense;
+        }
+        if (personnageCible.pointsDeVie - degat <= 0) {
+            personnageCible.pointsDeVie = 0;
+        } else {
+            personnageCible.pointsDeVie -= degat;
+        }
+        System.out.println("");
+        System.out.println(nom + " attaque avec une puissance de : " + nbAttaque);
+        System.out.println(personnageCible.nom + " a une defense de : " + nbDefense);
+        System.out.println("Les dommages sont donc de : " + degat);
     }
 
     public void setNewInitiativeRandom() {
