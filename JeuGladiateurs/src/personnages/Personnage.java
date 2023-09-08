@@ -2,25 +2,28 @@ package personnages;
 
 public class Personnage {
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Attributs">
-    // TODO : Mettre vos attributs ici
-    // </editor-fold>
+    String nom;
+    int pointsDeVie;
+    int valeurMaxAttaque;
+    int valeurDefense;
+    int initiative;
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
-        // TODO : Constructeur AVEC paramètres
+        this.nom = nom;
+        pointsDeVie = pvs;
+        valeurMaxAttaque = attaqueMax;
+        valeurDefense = defense;
+        initiative = ini;
+
     }
 
     public Personnage() {
-        // TODO : Constructeur SANS paramètres qui initialise à ZÉRO ou à ""
+        nom = "";
+        pointsDeVie = 0;
+        valeurMaxAttaque = 0;
+        valeurDefense = 0;
+        initiative =0;
     }
-    // </editor-fold>
 
     // **************************************************************************
     // **************************************************************************
@@ -29,7 +32,6 @@ public class Personnage {
     // TODO : Les getters
     // TODO : Les setters
     // </editor-fold>
-
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
