@@ -4,10 +4,6 @@ import personnages.Personnage;
 
 public class AffichageEcran {
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Méthodes d'affichage">
     public void afficherDebutCombat() {
         System.out.println("");
         System.out.println("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>");
@@ -17,6 +13,7 @@ public class AffichageEcran {
     }
     
     public void afficherSeparateurDeTour() {
+        System.out.println("");
         System.out.println("**************************************");
     }
 
