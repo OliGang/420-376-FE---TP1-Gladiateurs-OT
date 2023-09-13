@@ -1,6 +1,8 @@
 package personnages;
 
 import java.util.Random;
+import personnages.mirmillon;
+import personnages.rétiaire;
 
 public class Personnage {
 
