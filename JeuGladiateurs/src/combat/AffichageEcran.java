@@ -18,6 +18,7 @@ public class AffichageEcran {
     }
 
     public void afficherSeparateurInfosPerso() {
+        System.out.println("");
         System.out.println("------------------");
         System.out.println("INFOS PERSONNAGES");
         System.out.println("------------------");

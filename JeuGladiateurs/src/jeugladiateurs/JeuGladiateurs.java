@@ -19,22 +19,28 @@ public class JeuGladiateurs {
         Igor.afficherInfosPersonnage();
         affichage.afficherDebutCombat();
         // </editor-fold>
-        tour.afficheTour();
-        for (int i = 0; i < 100; i++) {
-            if (Bob.getInitiative() == i) {
-                Bob.frapperPersonnage(Igor);
-            } else if (Igor.getInitiative() == i) {
-                Igor.frapperPersonnage(Bob);
+        for (int i = 0; i < 50; i++) {
+            if (Bob.getPointsDeVie() <= 0 || Igor.getPointsDeVie() <= 0) {
+                System.out.println("");
+                i = 50;
+            } else {
+                tour.afficheTour();
+                for (int j = 0; j < 100; j++) {
+                    if (Bob.getInitiative() == j) {
+                        Bob.frapperPersonnage(Igor);
+                    } else if (Igor.getInitiative() == j) {
+                        Igor.frapperPersonnage(Bob);
+                    }
+                }
+                affichage.afficherSeparateurInfosPerso();
+                Bob.afficherInfosPersonnage();
+                Igor.afficherInfosPersonnage();
+                Bob.setNewInitiativeRandom();
+                Igor.setNewInitiativeRandom();
+                tour.augmenteTour();
+                affichage.afficherSeparateurDeTour();
             }
         }
-        affichage.afficherSeparateurInfosPerso();
-        Bob.afficherInfosPersonnage();
-        Igor.afficherInfosPersonnage();
-        Bob.setNewInitiativeRandom();
-        Igor.setNewInitiativeRandom();
-        tour.augmenteTour();
-        affichage.afficherSeparateurDeTour();
-
         // TODO : Après la boucle, afficher le résultat du combat
         // </editor-fold>
     }
