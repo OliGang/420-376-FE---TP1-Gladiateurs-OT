@@ -3,6 +3,8 @@ package jeugladiateurs;
 import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
+import personnages.mirmillon;
+import personnages.rétiaire;
 
 public class JeuGladiateurs {
 
@@ -10,8 +12,8 @@ public class JeuGladiateurs {
 
         CompteurDeTour tour = new CompteurDeTour();
         AffichageEcran affichage = new AffichageEcran();
-        Personnage Bob = new Personnage("Bob le malchanceux", 15, 15, 70, 15);
-        Personnage Igor = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
+        Personnage Bob = new mirmillon("Mirmillon", "Bob le malchanceux", 15, 15, 70, 15);
+        Personnage Igor = new rétiaire("retiaire", "Igor l'empaleur", 25, 5, 100, 30);
         // </editor-fold>
 
         // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
