@@ -11,7 +11,7 @@ public class AffichageEcran {
         System.out.println("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>");
         System.out.println("");
     }
-    
+
     public void afficherSeparateurDeTour() {
         System.out.println("");
         System.out.println("**************************************");
@@ -25,7 +25,13 @@ public class AffichageEcran {
     }
 
     public void afficheVictoire(Personnage personnage1, Personnage personnage2) {
-        // TODO : Afficher le gagnant du combat, tel que montré dans l'énoncé
+        if (personnage1.getPointsDeVie() == 0) {
+            System.out.println("Igor l'empaleur gagne le combat !!");
+            System.out.println("");
+        } else {
+            System.out.println("Bob le malchanceux gagne le combat !!");
+            System.out.println("");
+        }
     }
     // </editor-fold>
 }

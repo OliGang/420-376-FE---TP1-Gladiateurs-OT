@@ -41,7 +41,7 @@ public class JeuGladiateurs {
                 affichage.afficherSeparateurDeTour();
             }
         }
-        // TODO : Après la boucle, afficher le résultat du combat
+        affichage.afficheVictoire(Bob, Igor);
         // </editor-fold>
     }
 
