@@ -28,9 +28,9 @@ public class JeuGladiateurs {
             } else {
                 tour.afficheTour();
                 for (int j = 0; j < 100; j++) {
-                    if (Bob.getInitiative() == j) {
+                    if (Bob.getInitiative() == j && Bob.getPointsDeVie() > 0) {
                         Bob.frapperPersonnage(Igor);
-                    } else if (Igor.getInitiative() == j) {
+                    } else if (Igor.getInitiative() == j && Igor.getPointsDeVie() > 0) {
                         Igor.frapperPersonnage(Bob);
                     }
                 }
